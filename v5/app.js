@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 app.use(expressSanitizer());// after bodyParser(always)
 app.use(methodOverride('_method'));
+app.use(express.static(__dirname + '/public'));
 
 // Database Setup.
 var mongoose = require('mongoose');
